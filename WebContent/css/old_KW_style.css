@@ -1,0 +1,167 @@
+@CHARSET "UTF-8";
+BODY {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small
+}
+
+TH {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	font-style: bold;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+TD {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.hint {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: 9px;
+	color: #808080;
+}
+
+.link {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	text-decoration: underline;	
+	color: Blue;
+}
+
+.hidden {
+	display: none;
+}
+
+.external {
+	background-color: #40b040;
+}
+
+.internal {
+	background-color: #f0f000;
+}
+
+A:link {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	text-decoration: underline;	
+	color: Blue;
+}
+
+A:visited {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	text-decoration: underline;	
+	color: Blue;
+}
+
+A:active {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	text-decoration: underline;	
+	color: Blue;
+}
+
+A:hover {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	text-decoration: underline;	
+	color: Blue;
+}
+
+INPUT {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small
+}
+
+.message {
+	font-family: arial, "lucida console", sans-serif;
+	font-size: small;
+	color: #FF0000
+}
+
+td.tableUnderline {
+	border-width: 3px 3px 3px 0px;
+	padding: 5px 5px 5px 5px;
+	border-style: solid solid solid solid;
+	border-color: white white white white;
+/*	background-color: rgb(250, 240, 230);/*/
+	-moz-border-radius: 0px 1px 0px 0px;
+	vertical-align: top;
+	text-align: left
+}
+
+.underline{
+	border-width: 0px 0px 1px 0px;
+	boder-color: #ff0000;
+}
+
+table.typeB {
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 2px;
+	border-style: solid solid solid solid;
+	border-color: #f0f0ff;
+	border-collapse: collapse;
+	background-color: #f0f0ff;
+	vertical-align: top;
+	text-align: left
+}
+table.typeB th {
+	border-width: 0px 0px 1px 0px;
+	padding: 2px 2px 2px 2px;
+	border-style: solid solid solid solid;
+	border-color: gray gray gray gray;
+	background-color: #e0e0ef;
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: top;
+/*	text-align: left*/
+}
+table.typeB td {
+	border-width: 0px 0px 0px 0px;
+	padding: 2px 2px 2px 2px;
+	border-style: solid solid solid solid;
+	border-color: #c0c0c0;
+/*	background-color: rgb(250, 240, 230);/*/
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: top;
+}
+
+table.header {
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 2px;
+	border-style: solid solid solid solid;
+	border-color: #f0f0ff;
+	border-collapse: collapse;
+	background-color: #f0f0ff;
+	vertical-align: top;
+	text-align: left
+}
+table.header th {
+	border-width: 0px 0px 1px 0px;
+	padding: 5px 5px 5px 5px;
+	border-style: solid solid solid solid;
+	border-color: gray gray gray gray;
+	background-color: #e0e0ef;
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: top;
+	text-align: left
+}
+table.header td {
+	border-width: 3px 3px 3px 0px;
+	padding: 5px 5px 5px 5px;
+	border-style: solid solid solid solid;
+	border-color: white white white white;
+/*	background-color: rgb(250, 240, 230);/*/
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: top;
+	text-align: left
+}
+input.error {
+	background-color: yellow;
+}
+	

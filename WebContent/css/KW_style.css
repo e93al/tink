@@ -1,0 +1,454 @@
+img { 
+	border: none;}
+html { /* för att nollställa IE */
+	margin:0; 
+	padding:0; 
+	border:0;}
+body {
+	font-family: Tahoma, Verdana, sans-serif;
+	background-color: #E1E1E1;
+	background-image: url("background.jpg"); 
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	margin:0; 
+	padding:0; 
+	border:0;}
+.hint {
+	color: #808080;
+	font-size: 11px;
+	
+}
+.clear{
+	clear: both; }
+
+.header  {
+	width: 1020px;
+	height: 129px;
+	position:relative;
+	background: url(img/header.jpg);
+}
+
+.hidden {
+	font-size:1px;
+	visibility: hidden;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.link {
+	cursor:pointer;}
+
+	
+ /* Huvudmenyn */
+.toppmeny{
+	font-size: 14px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 2pt;
+	line-height: 60px;
+	text-transform: uppercase;
+	text-decoration: none;
+	width: 980px;
+	height: 49px;
+	position: absolute;
+	left: 20px;
+	bottom: 0;
+	overflow: hidden;}
+.toppmeny ul{
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 100%;
+	height: 100%;
+	border: 0;}
+.toppmeny ul li{
+	display: inline;}
+.toppmeny ul li a{
+	float: left;
+	color: #212121;
+	padding: 0px 10px;
+	margin-left: 10px;
+	margin-right: 0px;
+	text-decoration: none;}
+.toppmeny ul li a:hover, .toppmeny ul li .current{
+	color: #F6F6F6;
+	background: url(meny-on.jpg) center repeat-x;
+	height: 100%;}	
+
+/*Body delen av sidan TJÄNSTER*/
+.kroppen  {
+	width: 1020px;
+	position:relative;
+	background: url(img/ljus-bakgrund.jpg) center center repeat-y;}
+
+.spalt-v{
+	position: absolute;
+	margin-top: 20px;
+	/*top: 0;*/
+	/*bottom: 0;*/
+	left: 0;
+	width: 200px; /*Width of frame div*/
+	height: 281px;
+	background: url(img/meny2-left.jpg) center center repeat-y;
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/}
+	
+.spalt-v2{
+	position: absolute;
+	margin-top: 20px;
+	/*top: 0;*/
+	/*bottom: 0;*/
+	left: 0;
+	width: 200px; /*Width of frame div*/
+	height: 600px;
+	background: url(img/meny2-left.jpg) center center repeat-y;
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/}
+
+.spalt-h{
+	position: relative;
+	top: 0;
+	/*bottom: 0;*/ 
+	left: 83px;
+	//right: 0px;
+	width: 783px;
+	//height: 100%; /*PROBLEM*/
+	overflow: hidden;}
+
+.spalt-h2{
+	position: absolute;
+	/*top: 0;*/
+	left: 0;
+	width: 462px; /*Width of frame div*/
+	height: auto;
+	overflow: auto; /*Disable scrollbars. Set to "scroll" to enable*/}
+
+.spalt-h3{
+	position: relative;
+	/*top: 0;*/
+	bottom: 0; 
+	left: 483px;
+	/*right: 30px;*/
+	width: 100%; /*Width of frame div*/
+	height: 100%;
+	overflow: auto; /*Disable scrollbars. Set to "scroll" to enable*/}
+	
+.marginal{
+	margin: 10px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+	margin-left: 40px;
+	line-height: 35px;
+}
+
+.marginal2{
+	margin: 0px;
+	margin-top: 20px;
+}
+.marginal3{
+	margin-top: 50px;
+}
+
+
+/*Sidfot*/
+.foten  {
+	width: 1020px;
+	height: 104px;
+	position:relative;
+	background: url(img/foten.jpg);}
+	
+/* Stilmallar */
+a.arialbrod:link {
+	color: #79BFCC;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: Normal;
+	text-decoration: none;
+	cursor:pointer;}
+a.georgia12p:link {
+	color: #79BFCC;
+	font-size: 12px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Italic;
+	text-decoration: none;}
+a.georgia12p:visited {
+	color: #79BFCC;
+	font-size: 12px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Italic;
+	text-decoration: none;}
+a.georgia13p:link {
+	color: #79BFCC;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Italic;
+	text-decoration: none;}
+a.georgia13p:visited {
+	color: #79BFCC;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Italic;
+	text-decoration: none;}
+a.georgia13white:link {
+	color: #F6F6F6;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Italic;
+	text-decoration: none;}
+a.georgia13white:visited {
+	color: #F6F6F6;
+	font-size: 13px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Italic;
+	text-decoration: none;}
+a.meny2:link {
+	color: #212121;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.meny2:visited {
+	color: #212121;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.meny2:hover {
+	color: #747554;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.menym:link {
+	color: #212121;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	line-height: 24px;
+	letter-spacing: 1pt;
+	text-decoration: none;}
+a.menym:visited {
+	color: #212121;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-decoration: none;}
+a.menym:hover {
+	color: #747554;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-decoration: none;}
+a.sitemap:link {
+	color: #6B6C6E;
+	font-size: 12px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.sitemap:visited {
+	color: #6B6C6E;
+	font-size: 12px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.sitemap:hover {
+	color: #212121;
+	font-size: 12px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.meny3:link {
+	color: #212121;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+a.meny3:hover {
+	color: #747554;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;
+	text-decoration: none;}
+.menyrub {
+	color: #747554;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+		line-height: 18px;
+	letter-spacing: 1pt;
+	text-transform: uppercase;}
+.meny3rubrik {
+	color: #212121;
+	font-size: 14px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;}
+.brodtext {
+	color: #212121;
+	font-size: 13px;
+	line-height: 24px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Normal;}
+.brodtext2 {
+	color: #212121;
+	font-size: 12px;
+	line-height: 20px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Normal;}
+.brodpuff {
+	color: #212121;
+	font-size: 12px;
+	line-height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: Normal;}
+.brodpuff-serif {
+	color: #212121;
+	font-size: 13px;
+	line-height: 20px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Normal;}
+.rubrik18sans {
+	color: #212121;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;}
+.rubrik18serif {
+	color: #212121;
+	font-size: 18px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;}
+.rubrik16sans {
+	color: #212121;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: Normal;
+	text-transform: uppercase;}
+.rubrik16sansbold {
+	color: #212121;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: Bold;
+	text-transform: uppercase;}
+.rubrik16serif {
+	color: #212121;
+	font-size: 16px;
+	font-family: Georgia, Times New Roman, serif;
+	font-style: Normal;
+	letter-spacing: 1pt;
+	text-transform: uppercase;}
+.footertext {
+	color: #212121;
+	font-size: 12px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-style: Normal;
+	line-height: 30px;
+	letter-spacing: 1pt;
+	text-transform: uppercase;}
+	
+/* Bild slider på ettan*/
+/*--Main Container--*/
+.main_view {
+	width: 942px;
+	padding: 0;
+	margin: 0 auto;
+}
+/*--Window/Masking Styles--*/
+.window {
+	height:342px;	width: 942px;
+	overflow: hidden; /*--Hides anything outside of the set width/height--*/
+	position: relative;
+}
+.image_reel {
+	position: absolute;
+	top: 0; left: 0;
+}
+.image_reel img {float: left;}
+
+/*--Paging Styles--*/
+.paging {
+	position: absolute;
+	top: 320px; right: -17px;
+	width: 178px; height:47px;
+	z-index: 100; /*--Assures the paging stays on the top layer--*/
+	text-align: center;
+	line-height: 40px;
+	display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+	padding: 5px;
+	font-size: 12px;
+	font-family: Tahoma, Verdana, sans-serif;
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.paging a.active { 
+	background: #79becb;
+	color: #222222;
+			border: 1px solid #79becb;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+table.typeB {
+	border-width: 0px;
+	border-spacing: 2px;
+	border-style: solid solid solid solid;
+	border-color: #f0f0ff;
+	border-collapse: collapse;
+	background-color: #E1E1E1;
+	vertical-align: top;
+	text-align: left
+}
+table.typeB th {
+	font-size: 12px;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0px 0px 1px 0px;
+padding: 2px 2px 2px 2px;
+	border-style: solid solid solid solid;
+/* 	border-color: gray gray gray gray; */
+	border-color: gray;
+	background-color: #E1E1E1;
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: top;
+/*	text-align: left*/
+}
+table.typeB td {
+	font-size: 12px;
+	/*border-width: 1px 1px 1px 1px;*/
+	border-width: 0px 0px 0px 0px;
+	padding: 2px 2px 2px 2px;
+	border-style: solid solid solid solid;
+	border-color: gray;
+/*border-color: #ff0000;*/
+/*	 background-color: rgb(250, 240, 230);/*/
+	-moz-border-radius: 0px 0px 0px 0px;
+	vertical-align: top;
+}
+
+input.error, textarea.error {
+    color: red;
+    background-color: yellow;
+}
+
+
+

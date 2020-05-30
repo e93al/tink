@@ -1,0 +1,49 @@
+
+COMBINED
+10:33:16,271 DEBUG TinkDateConverter:6 - convert()
+10:33:16,277 DEBUG TimeEntryDao:6 - getInvoiceTimeEntries dbString: SELECT * FROM time_items WHERE case_id ='13217US' AND (ISNULL(invoice_id) OR invoice_id = 0) ORDER BY the_date
+10:33:16,279 DEBUG InvoiceActionBean:6 - postSingle()
+10:33:16,280 DEBUG InvoiceActionBean:6 - addEntry() 
+10:33:16,288 DEBUG StaffDao:76 - user bean is populated !
+10:33:16,296 DEBUG TimeEntryDao:6 - update()
+10:33:16,301 DEBUG TimeEntryDao:6 - update() executed UPDATE time_items SET the_date='170221', start_time=113000, end_time=120000, case_id=UPPER('13217US'), client='', case_name='', rate='2500', revenue='1250', duration='0.5', comment='', staff_alias='al', is_internal=false WHERE ID='100988'
+10:33:16,302 DEBUG InvoiceDao:6 - in postPWInvoiceLine, dbstring = 
+   DECLARE @nr integer; DECLARE @kundnr integer; DECLARE @momsjn nvarchar(1); DECLARE @Userid int;SELECT @nr = Nrserie FROM dbo.NUMMERSERIER_57 WHERE Nrtyp ='1'; 
+   UPDATE dbo.NUMMERSERIER_57  SET Nrserie = (@nr + 1) WHERE Nrtyp ='1';SELECT @kundnr = Kundnr FROM dbo.KUND_ARENDE_25 WHERE Arendenr = '13217US' and Kundtyp = 2;SELECT @momsjn = Momsjn from dbo.KUND_24 WHERE Kundnr = @kundnr;SELECT @Userid = Id FROM dbo.BEHORIG_50 WHERE Username = 'al'; INSERT INTO dbo.ATGARDER_120 (Id, Arendenr, Datum, Belopp, Atgardstext, Atgardsnr, Tid, Timarvode, Intaktstalle, Kundnr, Regtid, Direktord, Debiterasjn, Valutakod, Transid, Momsjn, Kostnadsbarare, Kontonr, Fastpris) VALUES 
+   (@userid, '13217US', '170221', 1250,  '', 9111,  30, 2500, '15',  @kundnr,  getdate(), 0,  'J', 'SEK', @nr + 1,  @momsjn, 99, 3000, 1)
+10:33:16,310 DEBUG InvoiceDao:6 - add() to execute INSERT INTO invoices (invoiced_by, case_id, date, amount, client, fixed_fee) VALUES 
+('al','13217US','170221',1250, 'null', 0)
+10:33:16,311 DEBUG TimeEntryDao:6 - setInvoiceId()
+10:33:16,320 DEBUG TimeEntryDao:6 - setInvoiceId() to execute UPDATE time_items SET invoice_id = 16687 WHERE id=100988
+
+SINGLE SEPARATE
+10:33:56,506 DEBUG TinkDateConverter:6 - convert()
+10:33:56,512 DEBUG TimeEntryDao:6 - getInvoiceTimeEntries dbString: SELECT * FROM time_items WHERE case_id ='13217US' AND (ISNULL(invoice_id) OR invoice_id = 0) ORDER BY the_date
+10:33:56,515 DEBUG InvoiceActionBean:6 - postMultiple() 
+10:33:56,515 DEBUG InvoiceActionBean:6 - addEntry() 
+10:33:56,521 DEBUG StaffDao:76 - user bean is populated !
+10:33:56,522 DEBUG InvoiceDao:6 - in postPWInvoiceLine, dbstring = 
+   DECLARE @nr integer; DECLARE @kundnr integer; DECLARE @momsjn nvarchar(1); DECLARE @Userid int;SELECT @nr = Nrserie FROM dbo.NUMMERSERIER_57 WHERE Nrtyp ='1'; 
+   UPDATE dbo.NUMMERSERIER_57  SET Nrserie = (@nr + 1) WHERE Nrtyp ='1';SELECT @kundnr = Kundnr FROM dbo.KUND_ARENDE_25 WHERE Arendenr = '13217US' and Kundtyp = 2;SELECT @momsjn = Momsjn from dbo.KUND_24 WHERE Kundnr = @kundnr;SELECT @Userid = Id FROM dbo.BEHORIG_50 WHERE Username = 'al'; INSERT INTO dbo.ATGARDER_120 (Id, Arendenr, Datum, Belopp, Atgardstext, Atgardsnr, Tid, Timarvode, Intaktstalle, Kundnr, Regtid, Direktord, Debiterasjn, Valutakod, Transid, Momsjn, Kostnadsbarare, Kontonr, Fastpris) VALUES (@userid, '13217US', '170221', 2500,  '', 9111,  60, 2500, '15',  @kundnr,  getdate(), 0,  'J', 'SEK', @nr + 1,  @momsjn, 99, 3000, 1)
+10:33:56,527 DEBUG InvoiceDao:6 - add() to execute INSERT INTO invoices (invoiced_by, case_id, date, amount, client, fixed_fee) 
+VALUES ('al','13217US','170221',2500, 'null', 0)
+10:33:56,528 DEBUG TimeEntryDao:6 - setInvoiceId()
+10:33:56,533 DEBUG TimeEntryDao:6 - setInvoiceId() to execute UPDATE time_items SET invoice_id = 16688 WHERE id=100989
+
+
+10:33:16,302 DEBUG InvoiceDao:6 - in postPWInvoiceLine, dbstring = 
+10:33:56,522 DEBUG InvoiceDao:6 - in postPWInvoiceLine, dbstring = 
+   DECLARE @nr integer; DECLARE @kundnr integer; DECLARE @momsjn nvarchar(1); DECLARE @Userid int;SELECT @nr = Nrserie FROM dbo.NUMMERSERIER_57 WHERE Nrtyp ='1'; 
+   DECLARE @nr integer; DECLARE @kundnr integer; DECLARE @momsjn nvarchar(1); DECLARE @Userid int;SELECT @nr = Nrserie FROM dbo.NUMMERSERIER_57 WHERE Nrtyp ='1'; 
+   UPDATE dbo.NUMMERSERIER_57  SET Nrserie = (@nr + 1) WHERE Nrtyp ='1';SELECT @kundnr = Kundnr FROM dbo.KUND_ARENDE_25 WHERE Arendenr = '13217US' and Kundtyp = 2;
+   UPDATE dbo.NUMMERSERIER_57  SET Nrserie = (@nr + 1) WHERE Nrtyp ='1';SELECT @kundnr = Kundnr FROM dbo.KUND_ARENDE_25 WHERE Arendenr = '13217US' and Kundtyp = 2;
+   SELECT @momsjn = Momsjn from dbo.KUND_24 WHERE Kundnr = @kundnr;SELECT @Userid = Id FROM dbo.BEHORIG_50 WHERE Username = 'al'; 
+   SELECT @momsjn = Momsjn from dbo.KUND_24 WHERE Kundnr = @kundnr;SELECT @Userid = Id FROM dbo.BEHORIG_50 WHERE Username = 'al'; 
+   INSERT INTO dbo.ATGARDER_120 (Id, Arendenr, Datum, Belopp, Atgardstext, Atgardsnr, Tid, Timarvode, Intaktstalle, Kundnr, Regtid, Direktord, Debiterasjn, Valutakod, Transid, Momsjn, Kostnadsbarare, Kontonr, Fastpris) VALUES 
+   INSERT INTO dbo.ATGARDER_120 (Id, Arendenr, Datum, Belopp, Atgardstext, Atgardsnr, Tid, Timarvode, Intaktstalle, Kundnr, Regtid, Direktord, Debiterasjn, Valutakod, Transid, Momsjn, Kostnadsbarare, Kontonr, Fastpris) VALUES 
+   (@userid, '13217US', '170221', 1250,  '', 9111,  30, 2500, '15',  @kundnr,  getdate(), 0,  'J', 'SEK', @nr + 1,  @momsjn, 99, 3000, 1)
+   (@userid, '13217US', '170221', 2500,  '', 9111,  60, 2500, '15',  @kundnr,  getdate(), 0,  'J', 'SEK', @nr + 1,  @momsjn, 99, 3000, 1)
+10:33:16,310 DEBUG InvoiceDao:6 - add() to execute INSERT INTO invoices (invoiced_by, case_id, date, amount, client, fixed_fee) VALUES 
+10:33:56,527 DEBUG InvoiceDao:6 - add() to execute INSERT INTO invoices (invoiced_by, case_id, date, amount, client, fixed_fee) VALUES 
+('al','13217US','170221',1250, 'null', 0)
+('al','13217US','170221',2500, 'null', 0)
