@@ -334,7 +334,8 @@ public class EntryEditActionBean extends BaseActionBean {
 		TimeEntry te = this.getTimeEntryDao().getMetricsAfter(staffAlias, cal.getTime());
 		getContext().getUser().setHrsWeek(te.getDuration());
 		getContext().getUser().setAvgWeek(
-				Utilities.roundOneDec((te.getDuration() / ((double) Math.min(dow, 5)))));		
+//				Utilities.roundOneDec((te.getDuration() / ((double) Math.min(dow, 5)))));		
+				Utilities.roundTwoDec((te.getDuration() / ((double) Math.min(dow, 5)))));		
 
 		// this month
 		cal = Calendar.getInstance(); // today
@@ -347,7 +348,8 @@ public class EntryEditActionBean extends BaseActionBean {
 		double passedWorkDaysMonth = 22.0 * ((double) daysInMonth) / 30.0;
 
 		getContext().getUser().setAvgMonth(
-				Utilities.roundOneDec(te.getDuration()/passedWorkDaysMonth));
+				//Utilities.roundOneDec(te.getDuration()/passedWorkDaysMonth));
+				Utilities.roundTwoDec(te.getDuration()/passedWorkDaysMonth));
 
 		// this year
 		cal = Calendar.getInstance(); // today
@@ -359,7 +361,8 @@ public class EntryEditActionBean extends BaseActionBean {
 
 		double passedWorkDaysYear = 220.0 * ((double) daysInYear) / 365.0;
 		getContext().getUser().setAvgYear(
-				Utilities.roundOneDec(te.getDuration()/passedWorkDaysYear));		
+				//Utilities.roundOneDec(te.getDuration()/passedWorkDaysYear));		
+				Utilities.roundTwoDec(te.getDuration()/passedWorkDaysYear));		
 	}
 
 	public boolean isFromWip() {
