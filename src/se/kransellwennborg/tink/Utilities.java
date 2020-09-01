@@ -53,6 +53,11 @@ public class Utilities {
 		return rounded / 10;		
 	}
 
+	public static double roundTwoDec(double inDouble) {
+		double rounded = Math.round(inDouble * 100);
+		return rounded / 100;		
+	}
+
 	public static int hrsToMins(double hrs) {
 		int res = 0;
 		res = (int) (hrs * 60.0);
@@ -77,8 +82,8 @@ public class Utilities {
 	public static String padNbr(int i) {
 		String s = (new Integer(i)).toString();;
 		if (i < 10 && i >=0) {
-			s = "0" + s;
 		}
+			s = "0" + s;
 		return s;
 	}
 	
