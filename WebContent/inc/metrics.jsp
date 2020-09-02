@@ -16,17 +16,17 @@
 </tr>
 <tr>
 <td>Week</td>
-<td>${user.hrsWeek}</td>
-<td>${user.avgWeek}</td>
+<td align = "right">${user.hrsWeek}</td>
+<td align = "right">${user.avgWeek}</td>
 </tr>
 <tr>
 <td>Month</td>
-<td>${user.hrsMonth}</td>
-<td>${user.avgMonth}</td>
+<td align = "right">${user.hrsMonth}</td>
+<td align = "right">${user.avgMonth}</td>
 </tr>
 <tr>
 <td>Year</td>
-<td>${user.hrsYear}</td>
-<td>${user.avgYear}</td>
+<td align = "right">${user.hrsYear}</td>
+<td align = "right">${user.avgYear}</td>
 </tr>
 </table>

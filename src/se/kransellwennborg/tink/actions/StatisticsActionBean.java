@@ -30,8 +30,9 @@ public class StatisticsActionBean extends BaseActionBean {
 		Logger.debug(this.getClass(), "in getRows()");
 		if (year == 0) {
 			Calendar now = Calendar.getInstance();
-			year = now.get(Calendar.YEAR);
-		}	
+			if (year == 0) {
+				year = now.get(Calendar.YEAR);
+			}	
 
 		if (rows == null) {
 			rows = new ArrayList<MonthStatEntries>();
