@@ -1,5 +1,7 @@
 <%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<fmt:setLocale value="sv_SE" />
 <jsp:useBean id="invoices" scope="request" class="se.kransellwennborg.tink.actions.InvoicesActionBean" />
 <jsp:setProperty name="invoices" property="invoicedBy" value="${actionBean.viewInvoicesFor}" />
 
@@ -31,7 +33,7 @@
 			<td>${entry.client}</td>
 			<td>${entry.invoicedBy}</td>
 			<td>${entry.date}</td>
-			<td>${entry.amount}</td>
+			<td align="right"><fmt:formatNumber type="number" pattern="#,###" value="${entry.amount}"/></td>
 			<td><stripes:link beanclass="se.kransellwennborg.tink.actions.InvoiceActionBean" event="view">
 				<stripes:param name="id" value="${entry.id}" />
 				view

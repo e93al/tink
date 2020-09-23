@@ -18,41 +18,34 @@
 	
 </head>
 <body>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<h1>Testing</h1>
-<table>
-<tr><td id="karl" onclick='alert(parseInt(document.getElementById("karl").innerHTML) + 2);'>341</td></tr>
-<tr><td id="karl2" onclick='alert(parseFloat(document.getElementById("karl2").innerHTML) + 2);'>341.6</td></tr>
-</table>
-<%
+<h3>Formatting of Number:</h3>  
+<c:set var="Amount" value="9850.17" />  
+<fmt:setLocale value="sv_SE" />
 
-//SortOrder so = new SortOrder();
+<p> grouping:  
+<fmt:formatNumber type="number" groupingUsed="true" value="${Amount}" /></p>  
 
-out.print("c:" + Constants.CLIENT_REF + "--");
-//Connection con = MysqlConnectionProvider.getNewConnection();
+<p> grouping, no dec:  
+<fmt:formatNumber type="number" groupingUsed="true" maxFractionDigits="0" value="${Amount}" /></p>  
+<p> grouping, 2 dec, explicit:  
+<fmt:formatNumber type="number" groupingUsed="true" maxFractionDigits="2" value="${Amount}" /></p>  
 
-//out.print("Host: " + MysqlConnectionProvider.host + "--");
+<p> grouping, 2 dec:  
+<fmt:formatNumber type="number" pattern="#,###.00" value="${Amount}" /></p> </table>
 
-//TimeEntry te = new TimeEntry();
+<p> Formatted Number-1:  
 
-//te.setCaseId("161105EP");
-
-//String ref = te.getClientRef();
-//String s2 = PatraWinDao.getCaseResponsible("161105EP");
-//out.print("Case resp: " + s2 + "<br/>"); 
-
-//String s = PatraWinDao.getClientRef("161105EP");
-//out.print("ref: " + s + "<br/>"); 
-// out.print("s2: " + s2 + "<br/>"); 
-
-//String s3 = PatraWinDao.getCaseResponsible("161105EP");
-//out.print("resp: " + s3 + "<br/>"); 
-
-%>
-<form>
-<input style="text-transform: uppercase;" type="text" name="fieldname"></body>
-
-</form>
+<fmt:formatNumber value="${Amount}" type="currency" /></p>  
+<p>Formatted Number-2:  
+<fmt:formatNumber type="number" groupingUsed="true" value="${Amount}" /></p>  
+<p>Formatted Number-3:  
+<fmt:formatNumber type="number" maxIntegerDigits="3" value="${Amount}" /></p>  
+<p>Formatted Number-4:  
+<fmt:formatNumber type="number" maxFractionDigits="0" value="${Amount}" /></p>  
+<p>Formatted Number-5:  
+<fmt:formatNumber type="percent" maxIntegerDigits="4" value="${Amount}" /></p>  
+<p>Formatted Number-6:  
+<fmt:formatNumber type="number" pattern="#,###" value="${Amount}" /></p> </table>
 </html>
 
 

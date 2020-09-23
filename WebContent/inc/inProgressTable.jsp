@@ -1,11 +1,13 @@
 <%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page import="se.kransellwennborg.tink.Constants" %>
 <jsp:useBean id="entries" scope="request" class="se.kransellwennborg.tink.beans.TimeEntries" />
 <jsp:useBean id="editActionBean" scope="request" class="se.kransellwennborg.tink.actions.EntryEditActionBean" />
 <jsp:setProperty name="entries" property="dateString" value="${navDate}" />
 <jsp:setProperty name="entries" property="staffAlias" value="${user.userName}" />
 <jsp:setProperty name="entries" property="sortOrder" value="${user.sortOrder}" />
+<fmt:setLocale value="sv_SE" />
 
 <table class="typeB">
 	<tr>
@@ -52,7 +54,7 @@
 			<td>${entry.clientRef}</td>
 			<td>${entry.shortClient}</td>
 			<td>${entry.shortCaseName}</td>
-			<td align="right">${entry.revenue}</td>
+			<td align="right"><fmt:formatNumber type="number" pattern="#,###" value="${entry.revenue}"/></td>
 			<td><stripes:link beanclass="se.kransellwennborg.tink.actions.InvoiceActionBean" charset="iso-8859-1">
 					<stripes:param name="caseId" value="${entry.caseId}" />Invoice</stripes:link>
 			</td>
@@ -65,7 +67,7 @@
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
-		<th align="right">${entries.totalRevenue}</th>
+		<th align="right"><fmt:formatNumber type="number" pattern="#,###" value="${entries.totalRevenue}"/></th>
 		<th>&nbsp;</th>
 	</tr>
 </table>

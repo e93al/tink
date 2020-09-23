@@ -34,19 +34,20 @@ public class StatisticsActionBean extends BaseActionBean {
 				year = now.get(Calendar.YEAR);
 			}	
 
-		if (rows == null) {
-			rows = new ArrayList<MonthStatEntries>();
-			// get list of attorneys
-			StaffDao sd = new StaffDao();
-			ArrayList<String> statsStaff = sd.getStatsStaff();			
-			// for each attorney
-			for (int i = 0; i < statsStaff.size(); i++) {
-				MonthStatEntries row = new MonthStatEntries();
-				row.setStaffAlias(statsStaff.get(i));
-				row.populate(year);
-				// create row
-				rows.add(row);				
-			}			
+			if (rows == null) {
+				rows = new ArrayList<MonthStatEntries>();
+				// get list of attorneys
+				StaffDao sd = new StaffDao();
+				ArrayList<String> statsStaff = sd.getStatsStaff();			
+				// for each attorney
+				for (int i = 0; i < statsStaff.size(); i++) {
+					MonthStatEntries row = new MonthStatEntries();
+					row.setStaffAlias(statsStaff.get(i));
+					row.populate(year);
+					// create row
+					rows.add(row);				
+				}			
+			}
 		}
 		return rows;
 	}
